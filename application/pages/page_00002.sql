@@ -21,7 +21,7 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'JPAULORC@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220318172254'
+,p_last_upd_yyyymmddhh24miss=>'20220318184802'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(49112409135580678804)
@@ -33,6 +33,7 @@ wwv_flow_api.create_page_plug(
 ,p_query_table=>'CURSO'
 ,p_include_rowid_column=>true
 ,p_plug_source_type=>'NATIVE_IR'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_prn_page_header=>'Report 1'
 );
 wwv_flow_api.create_worksheet(
@@ -118,14 +119,24 @@ wwv_flow_api.create_worksheet_column(
 ,p_rpt_show_filter_lov=>'1'
 );
 wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(48821765883259732219)
+,p_db_column_name=>'ATIVO'
+,p_display_order=>16
+,p_column_identifier=>'G'
+,p_column_label=>'Ativo'
+,p_column_type=>'STRING'
+,p_display_text_as=>'LOV_ESCAPE_SC'
+,p_rpt_named_lov=>wwv_flow_api.id(49114085267408726421)
+,p_rpt_show_filter_lov=>'1'
+);
+wwv_flow_api.create_worksheet_column(
  p_id=>wwv_flow_api.id(49112411688127678807)
 ,p_db_column_name=>'DESCRICAO'
-,p_display_order=>6
+,p_display_order=>17
 ,p_column_identifier=>'F'
 ,p_column_label=>'Descricao'
 ,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
-,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_rpt(
  p_id=>wwv_flow_api.id(49112666613274683559)
@@ -134,7 +145,7 @@ wwv_flow_api.create_worksheet_rpt(
 ,p_report_alias=>'491126667'
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
-,p_report_columns=>'ROWID:ID:NOME:EAD:TIPO:DESCRICAO'
+,p_report_columns=>'ROWID:ID:NOME:EAD:TIPO:DESCRICAO:ATIVO'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(49112653226782681648)

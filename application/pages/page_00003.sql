@@ -22,7 +22,7 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'JPAULORC@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220318173251'
+,p_last_upd_yyyymmddhh24miss=>'20220318185236'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(49112400223111678799)
@@ -37,6 +37,7 @@ wwv_flow_api.create_page_plug(
 ,p_edit_operations=>'i:u:d'
 ,p_lost_update_check_type=>'VALUES'
 ,p_plug_source_type=>'NATIVE_FORM'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(49112404796232678802)
@@ -121,6 +122,28 @@ wwv_flow_api.create_page_button(
 ,p_database_action=>'INSERT'
 );
 wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(48821765984833732220)
+,p_name=>'P3_ATIVO'
+,p_source_data_type=>'VARCHAR2'
+,p_is_required=>true
+,p_item_sequence=>70
+,p_item_plug_id=>wwv_flow_api.id(49112400223111678799)
+,p_item_source_plug_id=>wwv_flow_api.id(49112400223111678799)
+,p_prompt=>'Ativo'
+,p_source=>'ATIVO'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_RADIOGROUP'
+,p_named_lov=>'LOV_YES_NO'
+,p_lov=>'.'||wwv_flow_api.id(49114085267408726421)||'.'
+,p_begin_on_new_line=>'N'
+,p_field_template=>wwv_flow_api.id(49072290442174507279)
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--radioButtonGroup'
+,p_is_persistent=>'N'
+,p_lov_display_extra=>'YES'
+,p_attribute_01=>'2'
+,p_attribute_02=>'NONE'
+);
+wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(49112400554684678799)
 ,p_name=>'P3_ROWID'
 ,p_source_data_type=>'ROWID'
@@ -181,7 +204,7 @@ wwv_flow_api.create_page_item(
 ,p_name=>'P3_EAD'
 ,p_source_data_type=>'VARCHAR2'
 ,p_is_required=>true
-,p_item_sequence=>40
+,p_item_sequence=>60
 ,p_item_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_item_source_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_prompt=>'Ead'
@@ -217,7 +240,7 @@ unistr('SELECT ''Tecn\00F3logo'' D, ''T'' R '),
 '  FROM dual',
 ' ORDER BY D'))
 ,p_field_template=>wwv_flow_api.id(49072291707045507279)
-,p_item_template_options=>'#DEFAULT#'
+,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs:t-Form-fieldContainer--radioButtonGroup'
 ,p_is_persistent=>'N'
 ,p_lov_display_extra=>'YES'
 ,p_attribute_01=>'3'
@@ -227,7 +250,7 @@ wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(49112402510484678801)
 ,p_name=>'P3_DESCRICAO'
 ,p_source_data_type=>'VARCHAR2'
-,p_item_sequence=>60
+,p_item_sequence=>80
 ,p_item_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_item_source_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_prompt=>'Descricao'
