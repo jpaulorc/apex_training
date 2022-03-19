@@ -1,7 +1,7 @@
-prompt --application/shared_components/user_interface/lovs/lov_type_course
+prompt --application/shared_components/user_interface/lovs/lov_education_level
 begin
 --   Manifest
---     LOV_TYPE_COURSE
+--     LOV_EDUCATION_LEVEL
 --   Manifest End
 wwv_flow_api.component_begin (
  p_version_yyyy_mm_dd=>'2021.10.15'
@@ -12,19 +12,16 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_WPJPAULORCTRAINING'
 );
 wwv_flow_api.create_list_of_values(
- p_id=>wwv_flow_api.id(49117045745807798290)
-,p_lov_name=>'LOV_TYPE_COURSE'
+ p_id=>wwv_flow_api.id(49146285068915412822)
+,p_lov_name=>'LOV_EDUCATION_LEVEL'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'SELECT descricao D, valor R ',
-'  FROM tipo_curso',
-' ORDER BY D'))
+'SELECT ID R, DESCRICAO D',
+'  FROM grau_instrucao',
+' ORDER BY D '))
 ,p_source_type=>'SQL'
 ,p_location=>'LOCAL'
-,p_use_local_sync_table=>false
 ,p_return_column_name=>'R'
 ,p_display_column_name=>'D'
-,p_group_sort_direction=>'ASC'
-,p_default_sort_direction=>'ASC'
 );
 wwv_flow_api.component_end;
 end;

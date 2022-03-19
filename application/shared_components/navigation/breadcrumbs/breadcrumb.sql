@@ -23,16 +23,29 @@ wwv_flow_api.create_menu_option(
 );
 wwv_flow_api.create_menu_option(
  p_id=>wwv_flow_api.id(49112653077530681648)
-,p_short_name=>'CURSO_RPT'
-,p_link=>'f?p=&APP_ID.:2:&APP_SESSION.::&DEBUG.:::'
+,p_short_name=>'Cursos'
+,p_link=>'f?p=&APP_ID.:2:&SESSION.::&DEBUG.:::'
 ,p_page_id=>2
 );
 wwv_flow_api.create_menu_option(
  p_id=>wwv_flow_api.id(49112654239294681649)
 ,p_parent_id=>wwv_flow_api.id(49112653077530681648)
-,p_short_name=>'CURSO_FRM'
-,p_link=>'f?p=&APP_ID.:3:&APP_SESSION.::&DEBUG.:::'
+,p_short_name=>'Curso'
+,p_link=>'f?p=&APP_ID.:3:&SESSION.::&DEBUG.:::'
 ,p_page_id=>3
+);
+wwv_flow_api.create_menu_option(
+ p_id=>wwv_flow_api.id(49145809899360746199)
+,p_short_name=>'Professores'
+,p_link=>'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>4
+);
+wwv_flow_api.create_menu_option(
+ p_id=>wwv_flow_api.id(49145811068289746200)
+,p_parent_id=>wwv_flow_api.id(49145809899360746199)
+,p_short_name=>'Professor'
+,p_link=>'f?p=&APP_ID.:5:&SESSION.::&DEBUG.:::'
+,p_page_id=>5
 );
 wwv_flow_api.component_end;
 end;

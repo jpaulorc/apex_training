@@ -21,7 +21,7 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'JPAULORC@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220318184802'
+,p_last_upd_yyyymmddhh24miss=>'20220318193515'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(49112409135580678804)
@@ -190,6 +190,24 @@ wwv_flow_api.create_page_da_action(
 ,p_action=>'NATIVE_REFRESH'
 ,p_affected_elements_type=>'REGION'
 ,p_affected_region_id=>wwv_flow_api.id(49112409135580678804)
+);
+wwv_flow_api.create_page_process(
+ p_id=>wwv_flow_api.id(48821766304247732224)
+,p_process_sequence=>10
+,p_process_point=>'ON_NEW_INSTANCE'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'COUNT_TIPO_CURSO'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'    v_contador NUMBER; ',
+'BEGIN',
+'    SELECT NVL(COUNT(*), 0)',
+'      INTO v_contador',
+'      FROM tipo_curso;',
+'    return v_contador;',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 );
 wwv_flow_api.component_end;
 end;

@@ -41,6 +41,15 @@ wwv_flow_api.create_list_item(
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'2,3'
 );
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(49145809215192746198)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>'Professor'
+,p_list_item_link_target=>'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
+,p_parent_list_item_id=>wwv_flow_api.id(49137836895029033866)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'4,5'
+);
 wwv_flow_api.component_end;
 end;
 /

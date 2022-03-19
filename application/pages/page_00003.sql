@@ -22,11 +22,11 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'JPAULORC@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220318185236'
+,p_last_upd_yyyymmddhh24miss=>'20220318201315'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(49112400223111678799)
-,p_plug_name=>'CURSO_FRM'
+,p_plug_name=>'Curso'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>wwv_flow_api.id(49072165917059507235)
 ,p_plug_display_sequence=>10
@@ -126,7 +126,7 @@ wwv_flow_api.create_page_item(
 ,p_name=>'P3_ATIVO'
 ,p_source_data_type=>'VARCHAR2'
 ,p_is_required=>true
-,p_item_sequence=>70
+,p_item_sequence=>80
 ,p_item_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_item_source_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_prompt=>'Ativo'
@@ -148,18 +148,12 @@ wwv_flow_api.create_page_item(
 ,p_name=>'P3_ROWID'
 ,p_source_data_type=>'ROWID'
 ,p_is_primary_key=>true
-,p_is_query_only=>true
-,p_item_sequence=>10
+,p_item_sequence=>20
 ,p_item_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_item_source_plug_id=>wwv_flow_api.id(49112400223111678799)
-,p_use_cache_before_default=>'NO'
-,p_prompt=>'Rowid'
 ,p_source=>'ROWID'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_HIDDEN'
-,p_label_alignment=>'RIGHT'
-,p_field_template=>wwv_flow_api.id(49072290442174507279)
-,p_item_template_options=>'#DEFAULT#'
 ,p_is_persistent=>'N'
 ,p_protection_level=>'S'
 ,p_attribute_01=>'Y'
@@ -168,7 +162,7 @@ wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(49112400938046678800)
 ,p_name=>'P3_ID'
 ,p_source_data_type=>'NUMBER'
-,p_item_sequence=>20
+,p_item_sequence=>40
 ,p_item_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_item_source_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_source=>'ID'
@@ -182,7 +176,7 @@ wwv_flow_api.create_page_item(
 ,p_name=>'P3_NOME'
 ,p_source_data_type=>'VARCHAR2'
 ,p_is_required=>true
-,p_item_sequence=>30
+,p_item_sequence=>50
 ,p_item_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_item_source_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_prompt=>'Nome'
@@ -204,7 +198,7 @@ wwv_flow_api.create_page_item(
 ,p_name=>'P3_EAD'
 ,p_source_data_type=>'VARCHAR2'
 ,p_is_required=>true
-,p_item_sequence=>60
+,p_item_sequence=>70
 ,p_item_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_item_source_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_prompt=>'Ead'
@@ -221,7 +215,7 @@ wwv_flow_api.create_page_item(
 ,p_name=>'P3_TIPO'
 ,p_source_data_type=>'VARCHAR2'
 ,p_is_required=>true
-,p_item_sequence=>50
+,p_item_sequence=>60
 ,p_item_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_item_source_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_prompt=>'Tipo'
@@ -230,27 +224,21 @@ wwv_flow_api.create_page_item(
 ,p_display_as=>'NATIVE_RADIOGROUP'
 ,p_named_lov=>'LOV_TYPE_COURSE'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'SELECT ''Bacharel'' D, ''B'' R ',
-'  FROM dual',
-' UNION ALL',
-unistr('SELECT ''Extens\00E3o'' D, ''E'' R '),
-'  FROM dual',
-' UNION ALL',
-unistr('SELECT ''Tecn\00F3logo'' D, ''T'' R '),
-'  FROM dual',
+'SELECT descricao D, valor R ',
+'  FROM tipo_curso',
 ' ORDER BY D'))
 ,p_field_template=>wwv_flow_api.id(49072291707045507279)
 ,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--stretchInputs:t-Form-fieldContainer--radioButtonGroup'
 ,p_is_persistent=>'N'
 ,p_lov_display_extra=>'YES'
-,p_attribute_01=>'3'
+,p_attribute_01=>'999'
 ,p_attribute_02=>'NONE'
 );
 wwv_flow_api.create_page_item(
  p_id=>wwv_flow_api.id(49112402510484678801)
 ,p_name=>'P3_DESCRICAO'
 ,p_source_data_type=>'VARCHAR2'
-,p_item_sequence=>80
+,p_item_sequence=>90
 ,p_item_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_item_source_plug_id=>wwv_flow_api.id(49112400223111678799)
 ,p_prompt=>'Descricao'

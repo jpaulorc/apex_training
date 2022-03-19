@@ -14,6 +14,7 @@ prompt --install
 @@application/shared_components/navigation/tabs/parent.sql
 @@application/shared_components/user_interface/lovs/login_remember_username.sql
 @@application/shared_components/user_interface/lovs/lov_course.sql
+@@application/shared_components/user_interface/lovs/lov_education_level.sql
 @@application/shared_components/user_interface/lovs/lov_type_course.sql
 @@application/shared_components/user_interface/lovs/lov_yes_no.sql
 @@application/pages/page_groups.sql
@@ -103,5 +104,7 @@ prompt --install
 @@application/pages/page_00001.sql
 @@application/pages/page_00002.sql
 @@application/pages/page_00003.sql
+@@application/pages/page_00004.sql
+@@application/pages/page_00005.sql
 @@application/pages/page_09999.sql
 @@application/end_environment.sql
