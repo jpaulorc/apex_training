@@ -21,7 +21,7 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'JPAULORC@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220318200745'
+,p_last_upd_yyyymmddhh24miss=>'20220321192730'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(49145802336141743312)
@@ -33,6 +33,7 @@ wwv_flow_api.create_page_plug(
 ,p_query_table=>'PROFESSOR'
 ,p_include_rowid_column=>false
 ,p_plug_source_type=>'NATIVE_IR'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_prn_page_header=>'Report 1'
 );
 wwv_flow_api.create_worksheet(
@@ -104,6 +105,81 @@ wwv_flow_api.create_worksheet_column(
 ,p_heading_alignment=>'LEFT'
 ,p_tz_dependent=>'N'
 );
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(48821768964384732250)
+,p_db_column_name=>'TELEFONE'
+,p_display_order=>15
+,p_column_identifier=>'F'
+,p_column_label=>'Telefone'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(49771850541689249401)
+,p_db_column_name=>'ENDERECO'
+,p_display_order=>25
+,p_column_identifier=>'G'
+,p_column_label=>unistr('Endere\00E7o')
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(49771850634435249402)
+,p_db_column_name=>'ENDERECO_NUMERO'
+,p_display_order=>35
+,p_column_identifier=>'H'
+,p_column_label=>unistr('N\00FAmero')
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(49771850720212249403)
+,p_db_column_name=>'COMPLEMENTO'
+,p_display_order=>45
+,p_column_identifier=>'I'
+,p_column_label=>'Complemento'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(49771850809312249404)
+,p_db_column_name=>'CEP'
+,p_display_order=>55
+,p_column_identifier=>'J'
+,p_column_label=>'Cep'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(49771850924545249405)
+,p_db_column_name=>'BAIRRO_ID'
+,p_display_order=>65
+,p_column_identifier=>'K'
+,p_column_label=>'Bairro Id'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(49771851050369249406)
+,p_db_column_name=>'CIDADE_ID'
+,p_display_order=>75
+,p_column_identifier=>'L'
+,p_column_label=>'Cidade'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'LOV_ESCAPE_SC'
+,p_heading_alignment=>'LEFT'
+,p_rpt_named_lov=>wwv_flow_api.id(49771786575575862198)
+,p_rpt_show_filter_lov=>'1'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(49771851105577249407)
+,p_db_column_name=>'CURRICULO'
+,p_display_order=>85
+,p_column_identifier=>'M'
+,p_column_label=>'Curriculo'
+,p_column_type=>'CLOB'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+);
 wwv_flow_api.create_worksheet_rpt(
  p_id=>wwv_flow_api.id(49145832501909750947)
 ,p_application_user=>'APXWS_DEFAULT'
@@ -111,7 +187,7 @@ wwv_flow_api.create_worksheet_rpt(
 ,p_report_alias=>'491458326'
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
-,p_report_columns=>'ID:NOME:GRAU_INSTRUCAO_ID:DT_NASCIMENTO:EMAIL'
+,p_report_columns=>'ID:NOME:GRAU_INSTRUCAO_ID:DT_NASCIMENTO:EMAIL:TELEFONE:ENDERECO:ENDERECO_NUMERO:COMPLEMENTO:CEP:BAIRRO_ID:CIDADE_ID:CURRICULO'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(49145810030377746199)

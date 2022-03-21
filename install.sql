@@ -13,9 +13,11 @@ prompt --install
 @@application/shared_components/navigation/tabs/standard.sql
 @@application/shared_components/navigation/tabs/parent.sql
 @@application/shared_components/user_interface/lovs/login_remember_username.sql
+@@application/shared_components/user_interface/lovs/lov_cities.sql
 @@application/shared_components/user_interface/lovs/lov_course.sql
 @@application/shared_components/user_interface/lovs/lov_education_level.sql
 @@application/shared_components/user_interface/lovs/lov_type_course.sql
+@@application/shared_components/user_interface/lovs/lov_uf.sql
 @@application/shared_components/user_interface/lovs/lov_yes_no.sql
 @@application/pages/page_groups.sql
 @@application/comments.sql
