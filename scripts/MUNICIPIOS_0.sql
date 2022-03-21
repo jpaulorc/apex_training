@@ -1,0 +1,10 @@
+CREATE TABLE municipio (
+  ID 	    NUMBER 		   NOT NULL
+ ,CODIGO  NUMBER		   NOT NULL
+ ,NOME 	  VARCHAR(255) NOT NULL
+ ,UF  	  CHAR(2)	     NOT NULL
+);
+
+ALTER TABLE municipio ADD CONSTRAINT pk_municipio PRIMARY KEY (ID);
+
+CREATE SEQUENCE municipio_s;
